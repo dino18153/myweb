@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Dino Dai</title>
+    <style>
+        /* 基础设置 */
+        body { margin: 0; padding: 0; background-color: #ffffff; color: #000000; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 40px; }
+        
+        /* --- 真正的页眉 (Header)：线就在这里下方 --- */
+/* --- 统一页眉标准 (请确保两页这一段完全一致) --- */
+header { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;    /* 垂直居中对齐，防止跳动 */
+    padding-bottom: 24px;   /* 线条上方的间距 */
+    border-bottom: 1px solid #e5e5e5; /* 统一线条颜色和粗细 */
+    margin-bottom: 60px;   /* 线条下方的间距 */
+    height: 32px;          /* 强制页眉高度固定，彻底锁死线条位置 */
+}
+
+.logo { 
+    font-size: 24px; 
+    font-weight: bold; 
+    letter-spacing: -0.5px; 
+    text-decoration: none; 
+    color: #000; 
+    line-height: 1;        /* 强制行高为 1，消除字体自带的边距 */
+}
+
+.nav-menu { 
+    display: flex; 
+    gap: 40px; 
+}
+
+.nav-menu a { 
+    text-decoration: none; 
+    color: #000; 
+    font-size: 15px; 
+    font-weight: 500; 
+    text-transform: uppercase; 
+    line-height: 1;        /* 强制行高为 1，与 Logo 对齐 */
+}
+
+        /* --- 个人信息区 (在线的下方) --- */
+        .personal-intro { margin-bottom: 100px; }
+        
+        .chinese-name { 
+            font-size: 50px; 
+            font-weight: bold; 
+            margin-bottom: 30px; 
+            letter-spacing: 4px; 
+        }
+
+        .personal-details { 
+    font-size: 14px; 
+    color: #888;          /* 让“WeChat 微信”这些标签变成更浅的灰色 */
+    line-height: 1.5; 
+}
+
+/* 新增：专门控制黑色文字的样式 */
+.info-value {
+    color: #000;          /* 强制内容显示为纯黑色 */
+    display: block;       /* 确保内容自成一行 */
+    margin-bottom: 8px;   /* 内容和下一个标签之间的间距 */
+}
+        /* 简历部分通用样式 */
+        .resume-section { margin-bottom: 80px; }
+        .resume-section h2 { font-size: 16px; text-transform: uppercase; letter-spacing: 1px; border-bottom: 1px solid #000; padding-bottom: 10px; margin-bottom: 40px; }
+        .resume-item { display: flex; margin-bottom: 40px; }
+        .resume-year { width: 200px; font-size: 16px; color: #888; font-weight: 500; }
+        .resume-content { flex: 1; max-width: 900px; }
+        .resume-title { font-size: 20px; font-weight: bold; margin: 0 0 8px 0; color: #000; }
+        .resume-desc { font-size: 16px; color: #555; line-height: 1.6; margin: 0; }
+
+        .skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; font-size: 16px; color: #555; line-height: 1.8; text-align: center; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+<header>
+    <a href="index.html" class="logo">Dino Dai</a>
+    <nav class="nav-menu">
+        <a href="about.html">关于我 (ABOUT)</a> 
+        <a href="index.html#projects">项目 (PROJECTS)</a>
+    </nav>
+</header>
+
+        <section class="personal-intro">
+            <div class="chinese-name">戴&nbsp;&nbsp;飞桐</div>
+           <div class="personal-details">
+    WeChat 微信
+    <span class="info-value">klnnnt</span>
+
+    Tel 电话
+    <span class="info-value">+86 17616279115</span>
+
+    Email 邮箱
+    <span class="info-value">dinodai2002@163.com</span>
+</div>
+        </section>
+
+        <div class="resume-section">
+            <h2>Approach (设计理念)</h2>
+            <div class="resume-item">
+                <div class="resume-year">Vision</div>
+                <div class="resume-content">
+                    <p class="resume-desc" style="font-size: 18px; color: #333;">
+                        我认为设计是对未来生活方式的期待。在我的实践中，我致力于将推测设计的批判性思维，与严谨的工业制造逻辑相结合。寻找真实有效的痛点，试图在技术与情感之间，寻找一种更加温和的设计表达。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="resume-section">
+            <h2>Capabilities (专业技能)</h2>
+            <div class="resume-item">
+                <div class="resume-year">Toolkit</div>
+                <div class="resume-content skills-grid">
+                    <div>
+                        <strong style="display: block; margin-bottom: 10px; color: #000;">Core Skills (核心能力)</strong>
+                        设计方法运用 / 批判性推测<br>
+                        用户研究 / 跨领域协作<br>
+                        概念生成 / 快速草图<br>
+                        3D 建模 / 渲染<br>
+                        原型制作 / 编程
+                    </div>
+                    <div>
+                        <strong style="display: block; margin-bottom: 10px; color: #000;">Software (软件工具)</strong>
+                        Rhino / KeyShot<br>
+                        SolidWorks / Figma<br>
+                        Arduino / 树莓派<br>
+                        PS / AI / XD<br>
+                        ChatGPT / Gemini<br>
+                        Midjourney / Nano Banana 2
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="resume-section">
+            <h2>Education (教育背景)</h2>
+            <div class="resume-item">
+                <div class="resume-year">2024 - 2026</div>
+                <div class="resume-content">
+                    <h3 class="resume-title">伦敦大学金史密斯学院 (Goldsmiths, UOL)</h3>
+                    <p class="resume-desc">设计学硕士 (MA Design) - 推测与技术方向: 专注于推测设计与未来科技生活方式探索。</p>
+                </div>
+            </div>
+            <div class="resume-item">
+                <div class="resume-year">2020 - 2024</div>
+                <div class="resume-content">
+                    <h3 class="resume-title">四川美术学院 (SCFAI)</h3>
+                    <p class="resume-desc">工业设计学士 (BA Industrial Design) - 绿色与产品设计方向: 专注于可持续生活方式与产品创新探索。</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
