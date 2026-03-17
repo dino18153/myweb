@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dino Dai | Design</title>
+    <style>
+        body {
+            margin: 0; padding: 0; background-color: #ffffff; color: #000000;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 40px; }
+
+        /* --- 统一页眉 (Header)：与 About 页面保持严格一致 --- */
+        /* --- 统一页眉标准 (请确保两页这一段完全一致) --- */
+header { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;    /* 垂直居中对齐，防止跳动 */
+    padding-bottom: 24px;   /* 线条上方的间距 */
+    border-bottom: 1px solid #e5e5e5; /* 统一线条颜色和粗细 */
+    margin-bottom: 60px;   /* 线条下方的间距 */
+    height: 32px;          /* 强制页眉高度固定，彻底锁死线条位置 */
+}
+
+.logo { 
+    font-size: 24px; 
+    font-weight: bold; 
+    letter-spacing: -0.5px; 
+    text-decoration: none; 
+    color: #000; 
+    line-height: 1;        /* 强制行高为 1，消除字体自带的边距 */
+}
+
+.nav-menu { 
+    display: flex; 
+    gap: 40px; 
+}
+
+.nav-menu a { 
+    text-decoration: none; 
+    color: #000; 
+    font-size: 15px; 
+    font-weight: 500; 
+    text-transform: uppercase; 
+    line-height: 1;        /* 强制行高为 1，与 Logo 对齐 */
+}
+
+        /* --- 首页内容布局 --- */
+        .about-section {
+            padding: 40px 0 100px 0; /* 减小了顶部 padding，因为 header 已有 margin */
+            max-width: 900px; 
+            font-size: 40px; 
+            font-weight: 500; 
+            line-height: 1.3; 
+            letter-spacing: -1px;
+        }
+        .about-section span { color: #888888; }
+
+        .projects-header {
+            font-size: 14px; 
+            text-transform: uppercase; 
+            letter-spacing: 1px;
+            border-bottom: 1px solid #000; 
+            padding-bottom: 10px; 
+            margin-bottom: 60px;
+        }
+
+        .projects-grid {
+            display: grid; 
+            grid-template-columns: 1fr;
+            gap: 120px;
+            padding-bottom: 100px;
+        }
+
+        .project-item { text-decoration: none; color: #000; display: block; }
+
+        .image-carousel {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            gap: 20px;
+            margin-bottom: 24px;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .image-carousel::-webkit-scrollbar { display: none; }
+
+        .carousel-item {
+            flex: 0 0 100%;
+            height: 600px; 
+            background-color: #f4f4f4;
+            scroll-snap-align: start;
+            display: flex; align-items: center; justify-content: center; color: #999;
+        }
+
+        .project-item:hover .carousel-item { opacity: 0.95; }
+
+        .project-info { display: flex; justify-content: space-between; align-items: baseline; }
+        .project-title { font-size: 24px; font-weight: bold; margin: 0; }
+        .project-year { font-size: 14px; color: #888; }
+        .project-desc { font-size: 16px; color: #555; margin-top: 12px; line-height: 1.5; max-width: 800px; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+<header>
+    <a href="index.html" class="logo">Dino Dai</a>
+    <nav class="nav-menu">
+        <a href="about.html">关于我 (ABOUT)</a> 
+        <a href="index.html#projects">项目 (PROJECTS)</a>
+    </nav>
+</header>
+
+        <section class="about-section">
+            这个网站：
+            <br>
+            <span>专注于通过设计探索未来生活方式、物质与技术的边界。将未来的不确定性转化为当下的选择。</span>
+        </section>
+
+        <div id="projects" class="projects-header">Selected Works (6)</div>
+        
+        <section class="projects-grid">
+            
+            <a href="project1.html" class="project-item">
+                <div class="image-carousel">
+                    <div class="carousel-item">作品 1 - 图片 1 (向右滑动 👉)</div>
+                    <div class="carousel-item">作品 1 - 图片 2</div>
+                    <div class="carousel-item">作品 1 - 图片 3</div>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">项目名称 01</h3>
+                    <span class="project-year">2025</span>
+                </div>
+                <div class="project-desc">一句话简述这个项目解决了什么问题或采用了什么概念。点击卡片查看完整设计说明。</div>
+            </a>
+
+            <a href="project2.html" class="project-item">
+                <div class="image-carousel">
+                    <div class="carousel-item">作品 2 - 图片 1</div>
+                    <div class="carousel-item">作品 2 - 图片 2</div>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">项目名称 02</h3>
+                    <span class="project-year">2024</span>
+                </div>
+                <div class="project-desc">一句话简述这个项目解决了什么问题或采用了什么概念。</div>
+            </a>
+
+        </section>
+    </div>
+
+</body>
+</html>
